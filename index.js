@@ -1,4 +1,4 @@
-// Utility function to parse and retrieve data from localStorage
+
 const retrieveEntries = () => {
     try {
         const entries = localStorage.getItem("user-entries");
@@ -9,35 +9,32 @@ const retrieveEntries = () => {
     }
 };
 
-// Display entries on the table
 const displayEntries = () => {
     const entries = retrieveEntries();
     const tableEntries = entries.map((entry) => `
         <tr>
-            <td class="border px-4 py-2">${entry.name}</td>
-            <td class="border px-4 py-2">${entry.email}</td>
-            <td class="border px-4 py-2">${entry.password}</td>
-            <td class="border px-4 py-2">${entry.dob}</td>
-            <td class="border px-4 py-2">${entry.acceptedTermsAndConditions ? 'true' : 'false'}</td>
+            <td class="border px-5 py-3">${entry.name}</td>
+            <td class="border px-5 py-3">${entry.email}</td>
+            <td class="border px-5 py-3">${entry.password}</td>
+            <td class="border px-5 py-3">${entry.dob}</td>
+            <td class="border px-5 py-3">${entry.acceptedTermsAndConditions ? 'True' : 'False'}</td>
         </tr>
     `).join("");
 
     document.getElementById("user-entries").innerHTML = tableEntries;
 };
 
-// Validate Date of Birth for age range (18-55 years)
 const validateDob = (dob) => {
     const dobDate = new Date(dob);
     const age = (Date.now() - dobDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
 
     if (age < 18 || age > 55) {
-        alert("Please enter a date of birth for users between 18 and 55 years old.");
+        alert("Please enter the user date of birth between 18 and 55 years old.");
         return false;
     }
     return true;
 };
 
-// Save form data and update the table
 const saveUserForm = (event) => {
     event.preventDefault();
 
@@ -53,7 +50,7 @@ const saveUserForm = (event) => {
         return;
     }
 
-    if (!validateDob(dob)) {
+    if (validateDob(dob)) {
         return;
     }
 
@@ -75,12 +72,9 @@ const saveUserForm = (event) => {
         console.error("Error saving entries to localStorage:", error);
     }
 
-    // Reset form fields after submission
     event.target.reset();
 };
 
-// Attach form submit event handler
 document.getElementById("user-form").addEventListener("submit", saveUserForm);
 
-// Display entries on page load
 displayEntries();
