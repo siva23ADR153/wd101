@@ -7,43 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-gray-200 flex items-center justify-center h-screen">
-        <div class="w-full max-w-2xl p-8 bg-white rounded-lg shadow-md">
-            <!-- Registration Form Section -->
-            <h2 class="text-2xl text-center font-semibold mb-6">Registration Form</h2>
+    <div class="bg-gray-400 flex items-center justify-center h-screen">
+        <div class="w-full max-w-3xl p-8 bg-green-200 rounded-lg shadow-md" style="position: ;">
+
+            <h2 class="text-2xl text-center font-bold mb-6">Registration Form</h2>
             <form id="user-form" aria-labelledby="registration-form">
                 <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
-                    <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter your full name" required>
+                    <label for="name" class="block text-md font-medium text-black-600">Name:</label>
+                    <input type="text" id="name" name="name" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your full name" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter your email" required>
+                    <label for="email" class="block text-md font-medium text-black-300">Email:</label>
+                    <input type="email" id="email" name="email" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your email" required>
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="block text-sm font-medium text-gray-600">Password</label>
-                    <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter your password" required>
+                    <label for="password" class="block text-md font-medium text-black-300">Password:</label>
+                    <input type="password" id="password" name="password" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your password" required>
                 </div>
                 <div class="mb-4">
-                    <label for="dob" class="block text-sm font-medium text-gray-600">Date of Birth</label>
-                    <input type="date" id="dob" name="dob" class="mt-1 p-2 w-full border rounded-md" placeholder="dd/mm/yyyy" required>
+                    <label for="dob" class="block text-md font-medium text-black-300">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="dd/mm/yyyy" required>
                 </div>
                 <div class="mb-4 flex items-center">
                     <input type="checkbox" id="acceptTerms" name="acceptTerms" class="mr-2" required>
-                    <label for="acceptTerms" class="text-sm font-medium text-gray-600">Accept Terms & Conditions</label>
+                    <label for="acceptTerms" class="text-md font-medium text-black-300">Accept Terms & Conditions ?</label>
                 </div>
-                <!-- Modify button to match screenshot's green button -->
-                <button type="submit" class="bg-green-500 text-white p-3 w-full rounded-md mt-3">Submit</button>
+
+                <button type="submit" class="bg-green-600 text-center text-white p-3 w-half rounded-lg mt-3">Submit</button>
             </form>
-            <h2 class="text-2xl text-center font-semibold mt-10 mb-6">Entries</h2>
-            <table id="entriesTable" class="table-auto w-full border-collapse border border-gray-300">
+            <h2 class="text-2xl text-center font-bold mt-9 mb-6">ENTRIES</h2>
+            <table id="entriesTable" class="table-auto w-full border-collapse border border-red-300">
                 <thead>
                     <tr>
-                        <th class="border px-4 py-2">Name</th>
-                        <th class="border px-4 py-2">Email</th>
-                        <th class="border px-4 py-2">Password</th>
-                        <th class="border px-4 py-2">DOB</th>
-                        <th class="border px-4 py-2">Accepted Terms?</th>
+                        <th class="border px-5 py-3">Name</th>
+                        <th class="border px-5 py-3">Email</th>
+                        <th class="border px-5 py-3">Password</th>
+                        <th class="border px-5 py-3">DOB</th>
+                        <th class="border px-5 py-3">Accepted Terms?</th>
                     </tr>
                 </thead>
                 <tbody id="user-entries">
