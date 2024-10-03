@@ -5,38 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: linear-gradient(violet,indigo,yellow,green);
+        }
+        h2{
+            background-color: peru;
+        }
+    </style>
 </head>
 <body>
-    <div class="bg-gray-400 flex items-center justify-center h-screen">
-        <div class="w-full max-w-3xl p-8 bg-green-200 rounded-lg shadow-md" style="position: ;">
+    <div class="bg-red-400 flex items-center justify-center h-screen">
+        <div class="w-full max-w-3xl p-8 bg-yellow-200 rounded-lg shadow-md">
 
             <h2 class="text-2xl text-center font-bold mb-6">Registration Form</h2>
             <form id="user-form" aria-labelledby="registration-form">
                 <div class="mb-4">
-                    <label for="name" class="block text-md font-medium text-black-600">Name:</label>
+                    <label for="name" class="block text-lg font-medium text-black-600">Name:</label>
                     <input type="text" id="name" name="name" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your full name" required>
                 </div>
                 <div class="mb-4">
-                    <label for="email" class="block text-md font-medium text-black-300">Email:</label>
+                    <label for="email" class="block text-lg font-medium text-black-300">Email:</label>
                     <input type="email" id="email" name="email" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your email" required>
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="block text-md font-medium text-black-300">Password:</label>
+                    <label for="password" class="block text-lg font-medium text-black-300">Password:</label>
                     <input type="password" id="password" name="password" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="Enter your password" required>
                 </div>
                 <div class="mb-4">
-                    <label for="dob" class="block text-md font-medium text-black-300">Date of Birth:</label>
+                    <label for="dob" class="block text-lg font-medium text-black-300">Date of Birth:</label>
                     <input type="date" id="dob" name="dob" class="mt-1 p-2 w-3/4 border rounded-md" placeholder="dd/mm/yyyy" required>
                 </div>
                 <div class="mb-4 flex items-center">
                     <input type="checkbox" id="acceptTerms" name="acceptTerms" class="mr-2" required>
-                    <label for="acceptTerms" class="text-md font-medium text-black-300">Accept Terms & Conditions ?</label>
+                    <label for="acceptTerms" class="text-lg font-medium text-black-300">Accept Terms & Conditions ?</label>
                 </div>
 
-                <button type="submit" class="bg-green-600 text-center text-white p-3 w-half rounded-lg mt-3">Submit</button>
+                <button type="submit" class="bg-green-600 text-white p-3 w-half rounded-lg mt-5">Submit</button>
             </form>
-            <h2 class="text-2xl text-center font-bold mt-9 mb-6">ENTRIES</h2>
-            <table id="entriesTable" class="table-auto w-full border-collapse border border-red-300">
+            <h2 class="text-2xl text-center font-bold mt-11 mb-7">ENTRIES</h2>
+            <table id="entriesTable" class="table-auto w-full border-collapse border border-red-700">
                 <thead>
                     <tr>
                         <th class="border px-5 py-3">Name</th>
