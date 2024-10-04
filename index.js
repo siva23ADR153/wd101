@@ -17,7 +17,7 @@ const displayEntries = () => {
             <td class="border px-5 py-3">${entry.email}</td>
             <td class="border px-5 py-3">${entry.password}</td>
             <td class="border px-5 py-3">${entry.dob}</td>
-            <td class="border px-5 py-3">${entry.acceptedTermsAndConditions ? 'True' : 'False'}</td>
+            <td class="border px-5 py-3">${entry.acceptedTermsAndConditions ? 'true' : 'false'}</td>
         </tr>
     `).join("");
 
@@ -50,7 +50,7 @@ const saveUserForm = (event) => {
         return;
     }
 
-    if (validateDob(dob)) {
+    if (!validateDob(dob)) {
         return;
     }
 
