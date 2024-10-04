@@ -13,11 +13,11 @@ const displayEntries = () => {
     const entries = retrieveEntries();
     const tableEntries = entries.map((entry) => `
         <tr>
-            <td class="border px-5 py-3">${entry.name}</td>
-            <td class="border px-5 py-3">${entry.email}</td>
-            <td class="border px-5 py-3">${entry.password}</td>
-            <td class="border px-5 py-3">${entry.dob}</td>
-            <td class="border px-5 py-3">${entry.acceptedTermsAndConditions ? 'true' : 'false'}</td>
+            <td class="border px-6 py-4">${entry.name}</td>
+            <td class="border px-6 py-4">${entry.email}</td>
+            <td class="border px-6 py-4">${entry.password}</td>
+            <td class="border px-6 py-4">${entry.dob}</td>
+            <td class="border px-6 py-4">${entry.acceptedTermsAndConditions ? 'true' : 'false'}</td>
         </tr>
     `).join("");
 
